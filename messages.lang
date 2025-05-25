@@ -1,0 +1,193 @@
+# PluginManagerの翻訳
+# カラーコードには&を使用してください。&自体を表示する場合は&&を使用してください
+# 引数には%1/%2/%...を使用してください
+# コメントには#を使用してください。行末でのコメントはサポートされていません（翻訳で#を使用する可能性があるため）
+# メッセージのデフォルトカラーは&a（緑）です
+# 一部の翻訳は複数行をサポートしています。行を分割するには\nを使用してください
+# 翻訳が不足している場合、自動的にファイルの末尾に追加され、コンソールに通知が表示されます
+
+# 一般的な翻訳
+pm.general.noPermission=&c申し訳ございませんが、このコマンドへのアクセス権限がありません。
+pm.general.pluginNotFound=&cプラグインが見つかりませんでした
+pm.general.checkConsole=コンソールを確認してください
+pm.general.onlyPlayer=&cこのコマンドはプレイヤーとして実行する必要があります。
+pm.general.onlyConsole=&cゲーム内コマンドは無効です。コンソールを使用してください。
+
+# ソフト依存関係
+pm.softdepend.found=ソフト依存関係 &6%1 &aがインストールされており、使用されます。
+
+# アップデーター
+pm.updater.found=&6PluginManager &aの新しいアップデートが利用可能です &e(%1 -> %2)&a。
+pm.updater.newMajor=&c------------------------------\n&6PluginManager &aの新しい&lメジャーアップデート&aが利用可能です &e(%1 -> %2)&a。\nこの新しいバージョンに関する詳細情報については、Github/SpigotMCページを確認してください。\n&c------------------------------
+pm.updater.downloadSuccess=新しい &6PluginManager &aバージョンのダウンロードに成功しました。
+pm.updater.checkChangelog=こちらで変更履歴を確認することをお勧めします &6%1&a。
+pm.updater.selfReload=PluginManagerが数秒後に自動リロードされます...
+pm.updater.reloadSuccess=PluginManagerが正常に自動リロードされました！
+pm.updater.downloadFail=&c最新の &6PluginManager &cバージョンを自動ダウンロードできませんでした。
+pm.updater.downloadHere=こちらからダウンロードできます: &6%1
+pm.updater.latestVersion=&6PluginManager&aの最新バージョンを使用しています。
+pm.updater.error=&c新しい &6PluginManager &cバージョンのチェック中に不明なエラーが発生しました！
+pm.updater.missingTranslations=&c&6messages.lang &cファイルに不足している翻訳があります\nアップデートをインストールしたばかりの場合、これは正常であり、カスタム翻訳が不要な場合は無視できます
+
+# インストール済みプラグイン
+pm.installedPlugins.notFound=&cプラグイン &6%1 &cはファイルが見つからなくなったため、設定から削除されました。
+
+# PluginUtils
+# loadPluginメソッド
+pm.pluginutils.loadPlugin.fileNotFound=プラグインファイルが見つかりません
+pm.pluginutils.loadPlugin.missingDependency=依存関係が不足しています
+pm.pluginutils.loadPlugin.invalidPluginFile=無効なプラグインファイル
+pm.pluginutils.loadPlugin.invalidPluginDescription=無効なプラグイン説明
+pm.pluginutils.loadPlugin.notAdded=プラグインリストに追加できません
+# unloadPluginメソッド
+pm.pluginutils.unloadPlugin.pluginListError=プラグインリストを取得できません
+pm.pluginutils.unloadPlugin.lookupNamesError=ルックアップ名を取得できません
+pm.pluginutils.unloadPlugin.commandMapError=コマンドマップを取得できません
+pm.pluginutils.unloadPlugin.knownCommandsError=既知のコマンドを取得できません
+pm.pluginutils.unloadPlugin.closeClassLoaderError=クラスローダーを閉じることができません
+pm.pluginutils.unloadPlugin.unknownClassLoader=&cSpigotがもはやURLClassLoaderを使用していないようです。\n&cこれをプラグイン開発者に報告してください！
+
+# インストール済みプラグイン設定
+pm.installedpluginsconfig.createError=installed.ymlファイルを作成できません！
+pm.installedpluginsconfig.loadError=installed.ymlファイルを読み込めません！
+pm.installedpluginsconfig.saveError=installed.ymlファイルを保存できません！
+
+# コマンド
+# リロードコマンド
+pm.commands.reload.start=&a全プラグインをリロード中...
+pm.commands.reload.done=&a全プラグインがリロードされました。
+pm.commands.reload.unloadError=&cプラグイン &6%1&c をアンロードできませんでした。 &7(%2)
+pm.commands.reload.loadError=&cプラグイン &6%1&c をロードできませんでした。 &7(%2)
+# PluginManagerコマンド
+pm.commands.pluginmanager.subNotFound=&cコマンドが見つかりませんでした。
+pm.commands.pluginmanager.invalidUsage=&c無効なコマンド使用法！
+pm.commands.pluginmanager.correctUsage=使用法: &6pm %1
+pm.commands.pluginmanager.unknownException=&cこのコマンドの実行中に不明なエラーが発生しました！\n&cこのプラグインの開発者に連絡し、ログのコピーを提供してください。
+# サブコマンド
+# Commandsサブ
+pm.subcommands.commands.noCommands=&cプラグイン &6%1 &cには登録されたコマンドがありません。
+pm.subcommands.commands.commandsOf=&6%1 &aのコマンド&6:
+pm.subcommands.commands.help=指定されたプラグインによって登録されたすべてのコマンドのリストを表示します。\nplugin.ymlに追加する「通常の」方法で登録されたコマンドのみ表示可能です。\nイベントを使用するなど、異なる方法で登録されたコマンドはPluginManagerでリストできません！
+# Deleteサブ
+pm.subcommands.delete.unloadError=&cプラグインをアンロードできませんでした。 &7(%2)
+pm.subcommands.delete.fileNotFound=&cプラグインのファイルが見つかりませんでした。
+pm.subcommands.delete.success=プラグインが削除されました。
+pm.subcommands.delete.deleteError=&cプラグインを削除できませんでした。
+pm.subcommands.delete.overwriteError=プラグインを上書きできませんでした
+pm.subcommands.delete.nextStartDelete=次回の再起動時に削除されます。
+pm.subcommands.delete.manualDelete=&cPluginMangerは上書きを試みましたが、これも失敗しました。\n&c残念ながら手動で削除する必要があります。
+pm.subcommands.delete.help=プラグインをアンロードし、サーバーから直接削除します。\nアクセス制限のためプラグインを削除できない場合、空のファイルで上書きし、可能であれば次回削除されます。\nこれも失敗した場合、PluginManagerではプラグインを削除する方法がないため、手動で削除する必要があります。
+# Disableサブ
+pm.subcommands.disable.disableError=&cプラグイン &6%1&c を無効化できませんでした。 &7(%2)
+pm.subcommands.disable.batchSuccess=すべてのプラグインを無効化しました &e(%1)&a。
+pm.subcommands.disable.singleSuccess=プラグイン &6%1 &aが無効化されました。
+pm.subcommands.disable.alreadyDisabled=&cプラグイン &6%1 &cはすでに無効化されています。
+pm.subcommands.disable.help=プラグインを無効化して実行を停止します。\n'/pm enable'を使用して簡単に再度有効化できます。
+# Downloadサブ
+pm.subcommands.download.success=プラグインのダウンロードに成功し、&6%1&a として保存されました。
+pm.subcommands.download.downloadError=&cプラグイン &6%1&c をダウンロードできませんでした。 &7(%2)
+pm.subcommands.download.idExtractError=&cURLからプラグインIDを抽出できませんでした。\n&aIDを手動で入力してみてください。IDはこちらで確認できます:\n&6https://www.spigotmc.org/resources/plugin-name.&aID&6/
+pm.subcommands.download.externalLink=&cプラグインに外部ダウンロードリンクがあり、自動でダウンロードできません。
+pm.subcommands.download.notJar=&cプラグインはjarファイルではありません。ファイルタイプ: &6%1
+pm.subcommands.download.notBought=&cこのプラグインを購入していないようです。\n&a価格は &6%1&a です。
+pm.subcommands.download.isPremium=&cプラグインはプレミアムリソースのため、自動でダウンロードできません。\n&a価格は &6%1&a です。
+pm.subcommands.download.updateConfigError=&c後のアップデートのためにプラグインを設定に追加できませんでした。
+pm.subcommands.download.noDownload=&cプラグインが見つからないか、ダウンロードがありません。
+pm.subcommands.download.spigetError=&cspiget APIに接続できませんでした。後でもう一度お試しください。 &7(%1)
+pm.subcommands.download.help=SpigotMCまたは直接リンクからゲーム内でプラグインをダウンロードします。\nプラグインがSpigotMCからダウンロードされた場合、現在のバージョンが保存され、将来'/pm update'を使用して簡単にアップデートできます。\nSpigotMCダウンロードの場合、プラグインのURLを貼り付けてPluginManagerがURLから直接IDを抽出することもできますが、手動でIDを貼り付けることもできます。\nIDはURLの末尾で確認できます: https://www.spigotmc.org/resources/plugin-name._ID_/
+# Dumpサブ
+pm.subcommands.dump.noBatchPermission=&c&6%1 &cのファイルを書き込めませんでした。サーバーフォルダへの書き込み権限がありますか？ &7(%2)
+pm.subcommands.dump.batchSuccess=すべてのプラグイン情報のダンプに成功しました。&6plugin_dumps &aフォルダで確認できます。
+pm.subcommands.dump.success=プラグイン情報のダンプに成功しました。&6plugin_dumps &aフォルダで確認できます。
+pm.subcommands.dump.noPermission=&cファイルを書き込めませんでした。サーバーフォルダへの書き込み権限がありますか？ &7(%1)
+pm.subcommands.dump.help=プラグインに関するすべての情報をサーバーフォルダ内のファイルにダンプし、インストール済みプラグインとその権限/コマンドの簡単な概要を取得します。\n情報には以下が含まれます:\n - 名前\n - 説明\n - バージョン\n - 作者\n - ウェブサイト\n - プレフィックス\n - コマンド\n - デフォルトと子権限を持つ権限
+pm.subcommands.dump.name=名前: %1
+pm.subcommands.dump.description=説明: %1
+pm.subcommands.dump.version=バージョン: %1
+pm.subcommands.dump.authors=作者: %1
+pm.subcommands.dump.website=ウェブサイト: %1
+pm.subcommands.dump.prefix=プレフィックス: %1
+pm.subcommands.dump.commands=コマンド:
+pm.subcommands.dump.permissions=権限:
+pm.subcommands.dump.default=デフォルト: %1
+pm.subcommands.dump.childPermissions=子権限:
+# Enableサブ
+pm.subcommands.enable.enableError=&cプラグイン &6%1&c を有効化できませんでした。 &7(%2)
+pm.subcommands.enable.batchSuccess=すべてのプラグインを有効化しました &e(%1)&a。
+pm.subcommands.enable.success=プラグイン &6%1 &aが有効化されました。
+pm.subcommands.enable.alreadyEnabled=&cプラグイン &6%1 &cはすでに有効化されています。
+pm.subcommands.enable.help=プラグインを有効化して再び使用できるようにします。\n'/pm disable'を使用して簡単に再度無効化できます。
+# Findサブ
+pm.subcommands.find.noPlugin=&cこのコマンドを登録したプラグインはありません。
+pm.subcommands.find.listHeader=&6このコマンドを持つプラグイン:
+pm.subcommands.find.help=指定されたコマンドを登録したプラグインを見つけます。\nplugin.ymlに追加する「通常の」方法で登録されたコマンドのみ検索可能です。\nイベントを使用するなど、異なる方法で登録されたコマンドはPluginManagerでリストできません！
+# Guiサブ
+pm.subcommands.gui.help=実際に実行せずにすべてのプラグイン固有のコマンドを実行するための使いやすいGUIを表示します。
+pm.subcommands.gui.page=ページ
+pm.subcommands.gui.backToPage=ページに戻る
+pm.subcommands.gui.goToPage=ページに移動
+pm.subcommands.gui.back=戻る
+# Helpサブ
+pm.subcommands.help.header=&6---------- &a%1 &6のヘルプ ----------
+pm.subcommands.help.help=すべてのサブコマンドに関する詳細情報を表示し、特別に検索することなく重要な側面をすべて直接確認できます。
+# Infoサブ
+pm.subcommands.info.pluginInfo=&6プラグイン情報:
+pm.subcommands.info.name=&a名前: &6%1
+pm.subcommands.info.description=&a説明: &6%1
+pm.subcommands.info.version=&aバージョン: &6%1
+pm.subcommands.info.authors=&a作者: &6%1
+pm.subcommands.info.pluginEnabled=&aプラグインは現在 &a有効化されています
+pm.subcommands.info.pluginDisabled=&aプラグインは現在 &c無効化されています
+pm.subcommands.info.help=指定されたコマンドに関する情報を表示します。\n以下が表示されます:\n - 名前\n - 説明\n - バージョン\n - 作者\n - プラグインステータス（有効化/無効化）
+# Listサブ
+pm.subcommands.list.header=&6プラグイン &e&o(%1)&6:
+pm.subcommands.list.help=インストール済みのすべてのプラグインとそのステータス（有効化/無効化）のリストを表示します。
+# Loadサブ
+pm.subcommands.load.loadError=&cプラグイン &6%1&c をロードできませんでした。 &7(%2)
+pm.subcommands.load.batchSuccess=すべてのプラグインをロードしました &e(%1)&a。
+pm.subcommands.load.alreadyLoaded=&cプラグインはすでにロードされています。
+pm.subcommands.load.success=プラグインがロードされました。
+pm.subcommands.load.help=まだロードされていないプラグインをロードします。\nファイル名（スペースが含まれていない場合）またはplugin.yml内の名前を入力できます。
+# Permissionsサブ
+pm.subcommands.permissions.noPermissions=&cプラグインには権限が登録されていません。
+pm.subcommands.permissions.header=&6&a%1&6の権限:
+pm.subcommands.permissions.description=説明
+pm.subcommands.permissions.default=デフォルト
+pm.subcommands.permissions.everybody=全員
+pm.subcommands.permissions.nobody=誰も
+pm.subcommands.permissions.ops=OP
+pm.subcommands.permissions.notOps=非OP
+pm.subcommands.permissions.undefined=未定義
+pm.subcommands.permissions.childPermissions=子権限
+pm.subcommands.permissions.help=プラグインによるすべての権限をリストします。\nplugin.ymlにリストされている権限のみ表示可能です。
+# Reloadサブ
+pm.subcommands.reload.success=プラグイン &6%1 &aがリロードされました。
+pm.subcommands.reload.help=プラグインをアンロードし、再度ロードして、読み込まれたすべてのリソースを解放し、実行時にアップデートしたり、問題を修正しようとします。
+# ReloadConfigサブ
+pm.subcommands.reloadconfig.batchSuccess=すべてのプラグインの設定をリロードしました &e(%1)&a。
+pm.subcommands.reloadconfig.success=プラグイン &6%1 &aの設定がリロードされました。
+pm.subcommands.reloadconfig.help=指定されたプラグインの設定をリロードします。\n独自のリロード設定コマンドがない他のプラグインの設定も簡単にリロードできます。\n一部のプラグインが設定値をキャッシュしたり、設定リロード時に他の処理が必要な場合、効果がない場合があります。
+# Restartサブ
+pm.subcommands.restart.batchSuccess=すべてのプラグインを再起動しました &e(%1)&a。
+pm.subcommands.restart.success=プラグイン &6%1 &aが再起動されました。
+pm.subcommands.restart.help=プラグインを有効化・無効化して、読み込まれたすべてのリソース（設定ファイルなど）を解放します。\nこれはクラスをリロードせず、実際に再起動できない多くのプラグインを破損させる可能性があります！
+# Unloadサブ
+pm.subcommands.unload.unloadError=&cプラグイン &6%1&c をアンロードできませんでした。 &7(%2)
+pm.subcommands.unload.batchSuccess=すべてのプラグインをアンロードしました &e(%1)&a。
+pm.subcommands.unload.success=プラグインがアンロードされました。
+pm.subcommands.unload.help=プラグインをアンロードし、読み込まれたすべてのリソースを解放します。\n新しいプラグインをテストしている場合、ニーズに合わない場合は再度アンロードできます。
+# Updateサブ
+pm.subcommands.update.batchSuccess=プラグイン &6%1 &aを最新バージョンにアップデートしました。
+pm.subcommands.update.batchUpToDate=プラグイン &6%1 &aはすでに最新です。
+pm.subcommands.update.batchSpigetError=&cspiget APIに接続できないか、プラグイン &6%1 &cがSpigotMCにありません。後でもう一度お試しください。
+pm.subcommands.update.batchWriteError=&c&6%1&cのプラグインファイルを保存できませんでした。
+pm.subcommands.update.batchDone=設定内のすべてのプラグインのアップデートをチェックしました。
+pm.subcommands.update.success=プラグインを最新バージョンにアップデートしました。
+pm.subcommands.update.upToDate=プラグインはすでに最新です。
+pm.subcommands.update.notInConfig=&cプラグイン &6%1 &cは設定ファイルにありません。
+pm.subcommands.update.spigetError=&cspiget APIに接続できないか、プラグインがSpigotMCにありません。後でもう一度お試しください。
+pm.subcommands.update.writeError=&cプラグインファイルを保存できませんでした。
+pm.subcommands.update.error=&cプラグイン &6%1&c をアップデートできませんでした。 &7(%2)
+pm.subcommands.update.nameUpdateAvailable=プラグイン &6%1 &aにアップデートが利用可能です。
+pm.subcommands.update.updateAvailable=プラグインにアップデートが利用可能です。
+pm.subcommands.update.help='/pm download'コマンドを使用して以前にダウンロードしたプラグインをアップデートします。\nこれはSpigotMCのプラグインでのみ動作します。
